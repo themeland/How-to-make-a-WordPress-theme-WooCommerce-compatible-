@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>To make your WordPress theme WooCommerce compatible, you'll need to add a few actions and templates to your theme. Here's a simple example of how to do this:</h2>
+	<p>Let's get started with these easy process.</p>
+	<p>Add WooCommerce Support: In your functions.php file, add the following code to add WooCommerce support to your theme:</p>
+
+	<pre>
+		<code>add_action( 'after_setup_theme', 'woocommerce_support' );
+			function woocommerce_support() {
+				add_theme_support( 'woocommerce' );
+			}</code>
+	</pre>
+	
+	<p>Add WooCommerce Templates: To display your products, cart, checkout, and other WooCommerce pages, you'll need to add the following templates to your theme:</p>
+	
+	<ul>
+		<li><strong>archive-product.php:</strong> A template to display the product archive page.</li>
+		<li><strong>single-product.php:</strong> A template to display a single product page.</li>
+		<li><strong>cart.php:</strong> A template to display the cart page.</li>
+		<li><strong>checkout.php:</strong> A template to display the checkout page.</li>
+	</ul>
+
+	<p>If you don't have these templates, you can copy them from the WooCommerce plugin to your theme directory.</p>
+
+	<p>Add WooCommerce Styles: To ensure that your theme looks great with WooCommerce, you'll need to include the WooCommerce styles in your theme. You can do this by adding the following code to your functions.php file:
+		javascript</p>
+
+	<pre>
+		<code>add_action( 'wp_enqueue_scripts', 'load_woocommerce_styles' );
+			function load_woocommerce_styles() {
+				wp_enqueue_style( 'woocommerce-styles', plugins_url( 'woocommerce/assets/css/woocommerce.css' ) );
+			}</code>
+	</pre>
+	<p>This will load the WooCommerce styles in your theme and ensure that it looks great with your products.</p>
+
+	<p>This is a basic example of how to make your WordPress theme WooCommerce compatible. Depending on the complexity of your theme, you may need to add additional templates and functions to fully integrate with WooCommerce.</p>
+</body>
+</html>
